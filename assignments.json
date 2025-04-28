@@ -2,7 +2,7 @@
   {
     "student": "Chris DeJesus",
     "major": "Computer Science",
-    "advisor": "Dr. Schanker"
+    "advisor": "Dr. Dang"
   },
   {
     "student": "Colby Knorr",
@@ -28,6 +28,11 @@
     "student": "Liam Fleck",
     "major": "Computer Science",
     "advisor": "Dr. Dang"
+  },
+  {
+    "student": "Luke Sky",
+    "major": "Music",
+    "advisor": "No advisor assigned"
   },
   {
     "student": "Robert Wentzel",
