@@ -1,15 +1,26 @@
 # advisor_matcher.py
 
-def match_advisors_to_students(students):
-    """
-    Simple logic to assign each student an advisor.
-    This function will eventually include matching criteria.
-    """
-    advisor_list = ["Dr. Smith", "Prof. Lee", "Dr. Gomez"]
-    assignments = {}
+def inputAdvisors():
+    advisorDirectory = {
+        "Computer Science": "Dr. Dang",
+        "Physics": "Dr. Upton",
+        "Engineering": "Dr. Lee",
+        "History": "Dr. Van Wie",
+        "Foreign Language": "Profesora Rubio",
+        "Mathematics": "Professor Schanker"
+    }
+    print("Enter advisor names and the majors they advise (leave name blank and press enter when done):")
+    while True:
+        advisor = input("Advisor Name: ")
+        if advisor.lower() == '':
+            break
+        major = input("Major they advise: ")
+        advisorDirectory[major] = advisor
+    return advisorDirectory
 
-    for i, student in enumerate(students):
-        advisor = advisor_list[i % len(advisor_list)]  # cycle through advisors
-        assignments[student] = advisor
-
+def assignAdvisors(students, advisorDirectory):
+    assignments = []
+    for name, major in students:
+        advisor = advisorDirectory.get(major, "No advisor assigned")
+        assignments.append((name, major, advisor))
     return assignments
