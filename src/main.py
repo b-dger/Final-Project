@@ -1,14 +1,18 @@
 # main.py
 
-from advisor_matcher import match_advisors_to_students
-from student_data import get_students
+from advisor_matcher import inputAdvisors, assignAdvisors
+from student_data import inputStudents
+
+def printAssignments(assignments):
+    print("\nStudent Advisor Assignments:")
+    for name, major, advisor in assignments:
+        print(f"Student: {name} | Major: {major} | Advisor: {advisor}")
 
 def main():
-    students = get_students()
-    advisor_assignments = match_advisors_to_students(students)
-    
-    for student, advisor in advisor_assignments.items():
-        print(f"{student} is assigned to {advisor}")
+    advisorDirectory = inputAdvisors()
+    students = inputStudents()
+    assignments = assignAdvisors(students, advisorDirectory)
+    printAssignments(assignments)
 
 if __name__ == "__main__":
     main()
