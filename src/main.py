@@ -73,6 +73,22 @@ def switch_major(assignments, student_name, new_major):
             return
     print(f"[❗ Not Found] {student_name}")
 
+def add_new_major(assignments):
+    """
+    Adds a new major to a selected student.
+    """
+    list_students(assignments)
+    student_name = input("Enter student name to assign new major: ").strip()
+    new_major = input("Enter new major name: ").strip()
+
+    for idx, (name, major, advisor) in enumerate(assignments):
+        if name == student_name:
+            assignments[idx] = (name, new_major, advisor)
+            print(f"[➕ Added] {student_name} is now majoring in {new_major}")
+            auto_save(assignments)
+            return
+    print(f"[❗ Not Found] {student_name}")
+
 def main():
     advisorDirectory = inputAdvisors()
     students = inputStudents()
@@ -81,7 +97,7 @@ def main():
     while True:
         printAssignments(assignments)
 
-        action = input("\nAction? (save / delete / switch advisor / switch major / quit): ").strip().lower()
+        action = input("\nAction? (save / delete / switch advisor / switch major / add major / quit): ").strip().lower()
 
         if action == "save":
             save_as_csv(assignments)
@@ -105,6 +121,9 @@ def main():
             name = input("Enter student name to switch major: ").strip()
             new_major = input("Enter new major: ").strip()
             switch_major(assignments, name, new_major)
+
+        elif action == "add major":
+            add_new_major(assignments)
 
         elif action == "quit":
             print("[👋 Exiting]")
