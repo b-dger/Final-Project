@@ -11,6 +11,7 @@ def inputStudents():
         ("Colby Knorr", "History"),
         ("Karl Marx", "Economics"),
         ("Hugh Man", "Humanities"),
+        ("Chris DeJesus", "Computer Science"),
         ("Emily Autumn", "Music")
     ]
 

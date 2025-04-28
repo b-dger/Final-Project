@@ -1,0 +1,37 @@
+[
+  {
+    "student": "Chris DeJesus",
+    "major": "Computer Science",
+    "advisor": "Dr. Schanker"
+  },
+  {
+    "student": "Colby Knorr",
+    "major": "History",
+    "advisor": "Dr. Van Wie"
+  },
+  {
+    "student": "Emily Autumn",
+    "major": "Music",
+    "advisor": "No advisor assigned"
+  },
+  {
+    "student": "Hugh Man",
+    "major": "Humanities",
+    "advisor": "No advisor assigned"
+  },
+  {
+    "student": "Karl Marx",
+    "major": "Economics",
+    "advisor": "No advisor assigned"
+  },
+  {
+    "student": "Liam Fleck",
+    "major": "Computer Science",
+    "advisor": "Dr. Dang"
+  },
+  {
+    "student": "Robert Wentzel",
+    "major": "Engineering",
+    "advisor": "Dr. Lee"
+  }
+]
