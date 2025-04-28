@@ -23,7 +23,7 @@ your-project-folder/
 **Course:** CSC 2440 Final Project  
 **Group Members:**  
 - Christian Orr-DeJesus  
-- [Partner Name]
+- Liam Fleck
 
 ## Summary
 A console-based Python program that matches students to academic advisors based on major.  
@@ -36,5 +36,5 @@ Features:
 
 1. **Clone** this repository  
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/b-dger/Final-Project.git
+   cd Final-Project
